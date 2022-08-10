@@ -21,8 +21,9 @@ Flags:
         
 ```
 
-For expose structs, gojson will generate `MarshalJSON/UnmarshalJSON` methods for marshal/unmarshal json. You also can use `gojson.Marshal/gojson.Unmarshal` functions to marshal/unmarshal json.
-If your field contains many escaped char, add `escape` to your field tag, it will improve preformance when unmarshal escape string.
+* For expose structs, gojson will generate `MarshalJSON/UnmarshalJSON` methods for marshal/unmarshal json. You also can use `gojson.Marshal/gojson.Unmarshal` functions to marshal/unmarshal json.
+* gojson will generate Marshal and Unmarsnal code by default, if you don't want to generate code for struct, use comment `+gojson:noencode`, `+gojson:nodecode` or `+gojson:none`.
+* If your field contains many escaped char, add `escape` to your field tag, it will improve preformance when unmarshal escape string.
 
 ## Benchmark
 ### Large Payload
